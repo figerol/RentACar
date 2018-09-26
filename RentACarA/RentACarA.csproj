@@ -1,0 +1,390 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="..\packages\NUnit.3.10.1\build\NUnit.props" Condition="Exists('..\packages\NUnit.3.10.1\build\NUnit.props')" />
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{EA68A938-5D3C-4113-9FCC-8CBB419CD8A3}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <RootNamespace>RentACarA</RootNamespace>
+    <AssemblyName>RentACarA</AssemblyName>
+    <TargetFrameworkVersion>v4.6.1</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+    <Deterministic>true</Deterministic>
+    <IsWebBootstrapper>false</IsWebBootstrapper>
+    <NuGetPackageImportStamp>
+    </NuGetPackageImportStamp>
+    <PublishUrl>C:\Users\Roli\Desktop\Setup\</PublishUrl>
+    <Install>true</Install>
+    <InstallFrom>Disk</InstallFrom>
+    <UpdateEnabled>false</UpdateEnabled>
+    <UpdateMode>Foreground</UpdateMode>
+    <UpdateInterval>7</UpdateInterval>
+    <UpdateIntervalUnits>Days</UpdateIntervalUnits>
+    <UpdatePeriodically>false</UpdatePeriodically>
+    <UpdateRequired>false</UpdateRequired>
+    <MapFileExtensions>true</MapFileExtensions>
+    <ApplicationRevision>0</ApplicationRevision>
+    <ApplicationVersion>1.0.0.%2a</ApplicationVersion>
+    <UseApplicationTrust>false</UseApplicationTrust>
+    <PublishWizardCompleted>true</PublishWizardCompleted>
+    <BootstrapperEnabled>true</BootstrapperEnabled>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ManifestCertificateThumbprint>1642A58EAE3E91687AE8DB40A513FC84DF5F1289</ManifestCertificateThumbprint>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ManifestKeyFile>RentACarA_TemporaryKey.pfx</ManifestKeyFile>
+  </PropertyGroup>
+  <PropertyGroup>
+    <GenerateManifests>true</GenerateManifests>
+  </PropertyGroup>
+  <PropertyGroup>
+    <SignManifests>true</SignManifests>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="EntityFramework, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>..\packages\EntityFramework.6.2.0\lib\net45\EntityFramework.dll</HintPath>
+    </Reference>
+    <Reference Include="EntityFramework.SqlServer, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>..\packages\EntityFramework.6.2.0\lib\net45\EntityFramework.SqlServer.dll</HintPath>
+    </Reference>
+    <Reference Include="itextsharp, Version=5.5.13.0, Culture=neutral, PublicKeyToken=8354ae6d2174ddca, processorArchitecture=MSIL">
+      <HintPath>..\packages\iTextSharp.5.5.13\lib\itextsharp.dll</HintPath>
+    </Reference>
+    <Reference Include="MetroFramework, Version=1.4.0.0, Culture=neutral, PublicKeyToken=5f91a84759bf584a, processorArchitecture=MSIL">
+      <HintPath>..\packages\MetroModernUI.1.4.0.0\lib\net\MetroFramework.dll</HintPath>
+    </Reference>
+    <Reference Include="MetroFramework.Design, Version=1.4.0.0, Culture=neutral, PublicKeyToken=5f91a84759bf584a, processorArchitecture=MSIL">
+      <HintPath>..\packages\MetroModernUI.1.4.0.0\lib\net\MetroFramework.Design.dll</HintPath>
+    </Reference>
+    <Reference Include="MetroFramework.Fonts, Version=1.4.0.0, Culture=neutral, PublicKeyToken=5f91a84759bf584a, processorArchitecture=MSIL">
+      <HintPath>..\packages\MetroModernUI.1.4.0.0\lib\net\MetroFramework.Fonts.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Office.Interop.Word, Version=15.0.0.0, Culture=neutral, PublicKeyToken=71e9bce111e9429c, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.Office.Interop.Word.15.0.4797.1003\lib\net20\Microsoft.Office.Interop.Word.dll</HintPath>
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+    </Reference>
+    <Reference Include="nunit.framework, Version=3.10.1.0, Culture=neutral, PublicKeyToken=2638cd05610744eb, processorArchitecture=MSIL">
+      <HintPath>..\packages\NUnit.3.10.1\lib\net45\nunit.framework.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="System.Security" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="CustomerAddresses.cs">
+      <DependentUpon>DBRentACar.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Customers.cs">
+      <DependentUpon>DBRentACar.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DBRentACar.Context.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>DBRentACar.Context.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DBRentACar.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>DBRentACar.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DBRentACar.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>DBRentACar.edmx</DependentUpon>
+    </Compile>
+    <Compile Include="frmChangePassword.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmChangePassword.Designer.cs">
+      <DependentUpon>frmChangePassword.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmCustomers.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmCustomers.Designer.cs">
+      <DependentUpon>frmCustomers.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmLogin.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmLogin.Designer.cs">
+      <DependentUpon>frmLogin.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmNewCustomer.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmNewCustomer.Designer.cs">
+      <DependentUpon>frmNewCustomer.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmNewRent.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmNewRent.Designer.cs">
+      <DependentUpon>frmNewRent.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmNewVehicle.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmNewVehicle.Designer.cs">
+      <DependentUpon>frmNewVehicle.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmOpenClosedRent.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmOpenClosedRent.Designer.cs">
+      <DependentUpon>frmOpenClosedRent.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmOpenCustomer.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmOpenCustomer.Designer.cs">
+      <DependentUpon>frmOpenCustomer.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmOpenRentDetails.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmOpenRentDetails.Designer.cs">
+      <DependentUpon>frmOpenRentDetails.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmOpenVehicle.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmOpenVehicle.Designer.cs">
+      <DependentUpon>frmOpenVehicle.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmRents.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmRents.Designer.cs">
+      <DependentUpon>frmRents.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmSelectVehicle.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmSelectVehicle.Designer.cs">
+      <DependentUpon>frmSelectVehicle.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmSettings.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmSettings.Designer.cs">
+      <DependentUpon>frmSettings.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmVehicles.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmVehicles.Designer.cs">
+      <DependentUpon>frmVehicles.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Main.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Main.Designer.cs">
+      <DependentUpon>Main.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="RACverBDataSet.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>RACverBDataSet.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="RACverBDataSet1.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>RACverBDataSet1.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="Rents.cs">
+      <DependentUpon>DBRentACar.tt</DependentUpon>
+    </Compile>
+    <Compile Include="sysdiagrams.cs">
+      <DependentUpon>DBRentACar.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Users.cs">
+      <DependentUpon>DBRentACar.tt</DependentUpon>
+    </Compile>
+    <Compile Include="VehiclePlatesAndModels.cs">
+      <DependentUpon>DBRentACar.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Vehicles.cs">
+      <DependentUpon>DBRentACar.tt</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="frmChangePassword.resx">
+      <DependentUpon>frmChangePassword.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmCustomers.resx">
+      <DependentUpon>frmCustomers.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmLogin.resx">
+      <DependentUpon>frmLogin.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmNewCustomer.resx">
+      <DependentUpon>frmNewCustomer.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmNewRent.resx">
+      <DependentUpon>frmNewRent.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmNewVehicle.resx">
+      <DependentUpon>frmNewVehicle.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmOpenClosedRent.resx">
+      <DependentUpon>frmOpenClosedRent.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmOpenCustomer.resx">
+      <DependentUpon>frmOpenCustomer.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmOpenRentDetails.resx">
+      <DependentUpon>frmOpenRentDetails.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmOpenVehicle.resx">
+      <DependentUpon>frmOpenVehicle.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmRents.resx">
+      <DependentUpon>frmRents.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmSelectVehicle.resx">
+      <DependentUpon>frmSelectVehicle.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmSettings.resx">
+      <DependentUpon>frmSettings.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmVehicles.resx">
+      <DependentUpon>frmVehicles.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Main.resx">
+      <DependentUpon>Main.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <EntityDeploy Include="DBRentACar.edmx">
+      <Generator>EntityModelCodeGenerator</Generator>
+      <LastGenOutput>DBRentACar.Designer.cs</LastGenOutput>
+    </EntityDeploy>
+    <None Include="DBRentACar.edmx.diagram">
+      <DependentUpon>DBRentACar.edmx</DependentUpon>
+    </None>
+    <None Include="packages.config" />
+    <None Include="Properties\DataSources\CustomerAddresses.datasource" />
+    <None Include="Properties\DataSources\Customers.datasource" />
+    <None Include="Properties\DataSources\frmRents.datasource" />
+    <None Include="Properties\DataSources\Rents.datasource" />
+    <None Include="Properties\DataSources\VehiclePlatesAndModels.datasource" />
+    <None Include="Properties\DataSources\Vehicles.datasource" />
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config">
+      <SubType>Designer</SubType>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="DBRentACar.Context.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <LastGenOutput>DBRentACar.Context.cs</LastGenOutput>
+      <DependentUpon>DBRentACar.edmx</DependentUpon>
+    </Content>
+    <Content Include="DBRentACar.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <DependentUpon>DBRentACar.edmx</DependentUpon>
+      <LastGenOutput>DBRentACar.cs</LastGenOutput>
+    </Content>
+    <Content Include="Resources\colorsetting.xml" />
+    <None Include="RACverBDataSet.xsc">
+      <DependentUpon>RACverBDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="RACverBDataSet.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>RACverBDataSet.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="RACverBDataSet.xss">
+      <DependentUpon>RACverBDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="RACverBDataSet1.xsc">
+      <DependentUpon>RACverBDataSet1.xsd</DependentUpon>
+    </None>
+    <None Include="RACverBDataSet1.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>RACverBDataSet1.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="RACverBDataSet1.xss">
+      <DependentUpon>RACverBDataSet1.xsd</DependentUpon>
+    </None>
+    <None Include="RentACarA_TemporaryKey.pfx" />
+    <None Include="Resources\loginPicture2.jpg" />
+    <None Include="Resources\mainPicture.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <Service Include="{508349B6-6B84-4DF5-91F0-309BEEBAD82D}" />
+  </ItemGroup>
+  <ItemGroup>
+    <BootstrapperPackage Include=".NETFramework,Version=v4.6.1">
+      <Visible>False</Visible>
+      <ProductName>Microsoft .NET Framework 4.6.1 %28x86 and x64%29</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.5.SP1">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">
+    <PropertyGroup>
+      <ErrorText>This project references NuGet package(s) that are missing on this computer. Use NuGet Package Restore to download them.  For more information, see http://go.microsoft.com/fwlink/?LinkID=322105. The missing file is {0}.</ErrorText>
+    </PropertyGroup>
+    <Error Condition="!Exists('..\packages\NUnit.3.10.1\build\NUnit.props')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\NUnit.3.10.1\build\NUnit.props'))" />
+  </Target>
+</Project>
